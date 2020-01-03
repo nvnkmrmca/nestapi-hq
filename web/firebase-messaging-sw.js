@@ -1,6 +1,7 @@
-importScripts("https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js");
-importScripts("https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js");
+// importScripts("https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js");
+// importScripts("https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js");
 
+try{
 firebase.initializeApp({
   apiKey: "AIzaSyCrGumtbn2McvNXzZdhShhLaW0QsIFZxOk",
   authDomain: "nest-df0a7.firebaseapp.com",
@@ -35,3 +36,6 @@ self.addEventListener('notificationclick', function(event) {
   // do what you want
   // ...
 });
+}catch(ex){
+  console.log('FCM ERROR: ', ex);
+}
