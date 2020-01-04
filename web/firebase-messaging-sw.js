@@ -35,6 +35,7 @@ messaging.setBackgroundMessageHandler(function(payload) {
 self.addEventListener('notificationclick', function(event) {
   // do what you want
   // ...
+  self.open('https://nestadmin.herokuapp.com/');
 });
 }catch(ex){
   console.log('FCM ERROR: ', ex);
